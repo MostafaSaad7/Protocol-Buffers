@@ -1,0 +1,25 @@
+// Protocol Buffers - Google's data interchange format
+// Proto file is a human-readable file that describes the structure 'Schema' of your data.
+syntax = "proto3";
+
+// message is a data structure that contains a set of fields.
+message Student {
+    /*
+    * type name = number >> serializatin sequence 'unique number'. 
+    * types: int32, int64, string, bool, float, double, bytes.
+    * serilization sequence important for not breaking api compatibility.
+    * each field is optional by default.
+    */
+     string name = 1;
+
+    string dof = 2;
+
+    int32 id = 3; 
+
+}
+
+// message can contain other messages as fields (nested messages).
+message Students {
+    repeated Student students = 1;
+}
+
